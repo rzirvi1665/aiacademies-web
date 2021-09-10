@@ -81,7 +81,7 @@ b {
     transition: opacity 150ms;
 
     &:hover {
-        opacity: 80%;
+        opacity: 0.8;
         cursor: pointer;
     }
 }
@@ -294,4 +294,36 @@ b {
 
 footer {
     padding: 120px 0;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 400ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 400ms;
 }

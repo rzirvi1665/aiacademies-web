@@ -12,11 +12,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v2
 
@@ -25,14 +20,14 @@ jobs:
         touch .env
         echo REACT_APP_API_URL="${{ secrets.REACT_APP_API_URL }}" >> .env
         echo GENERATE_SOURCEMAP=false >> .env
-        
+
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 16
     - run: npm ci --no-optional
     - run: npm run build
-    
+
     - name: Upload built app
       uses: sand4rt/ftp-deployer@v1.3
       with:

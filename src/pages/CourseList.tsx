@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineSearch, RiFileCopy2Line } from 'react-icons/all';
 import axiosInstance from '../helpers/axiosInstance';
+import Loader from './Loader';
 
 type Course = {
     id: number;
@@ -16,7 +17,7 @@ type Course = {
 }
 
 const CourseList: React.FC = () => {
-    const [courses, setCourses] = useState<Course[]>([]);
+    const [courses, setCourses] = useState<Course[]>();
 
     const fetchCourses = () => {
         axiosInstance
@@ -27,7 +28,7 @@ const CourseList: React.FC = () => {
     useEffect(fetchCourses, []);
 
     const renderCourseCard = (course: Course) => (
-        <div className="col">
+        <div className="col-3">
             <Link to={`/courses/${course.id}`} className="text-decoration-none">
                 <div className="card card-link">
                     <img src={course.banner} alt="" className="course-img" />
@@ -44,6 +45,7 @@ const CourseList: React.FC = () => {
 
     return (
         <>
+            <Loader loading={!courses} />
             <div className="bg-blue-900 text-white header">
                 <div className="container">
                     <h1>Courses</h1>
@@ -60,12 +62,12 @@ const CourseList: React.FC = () => {
 
                 <h3 className="font-w500 mb-3">Featured Courses</h3>
                 <div className="row gx-5 mb-5">
-                    {courses.filter(course => course.featured).map(renderCourseCard)}
+                    {courses?.filter(course => course.featured).map(renderCourseCard)}
                 </div>
 
                 <h3 className="font-w500 mb-3">All Courses</h3>
                 <div className="row gx-5 mb-5">
-                    {courses.map(renderCourseCard)}
+                    {courses?.map(renderCourseCard)}
                 </div>
             </div>
         </>

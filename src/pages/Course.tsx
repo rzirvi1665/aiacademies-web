@@ -5,6 +5,7 @@ import Markdown from 'markdown-to-jsx';
 import { FaFlagCheckered, FaRegClock, FiArrowRight } from 'react-icons/all';
 import axiosInstance from '../helpers/axiosInstance';
 import Error404 from './Error404';
+import Loader from './Loader';
 
 type Lesson = {
     id: number;
@@ -71,13 +72,13 @@ const Course: React.FC = () => {
     useEffect(fetchCourse, []);
 
     if (show404) return <Error404 />;
-    if (!course) return <h1>Loading</h1>;
 
     return (
         <>
+            <Loader loading={!course} />
             <div className="bg-blue-900 text-white header">
                 <div className="container">
-                    <h1>{course.name}</h1>
+                    <h1>{course?.name}</h1>
                 </div>
             </div>
             <div className="container py-5">
@@ -86,24 +87,26 @@ const Course: React.FC = () => {
                         <div className="card p-5">
                             <h3 className="font-w600 mb-4">Courses</h3>
                             <div className="lesson-list">
-                                {course.lessons.map(renderLesson)}
+                                {course?.lessons.map(renderLesson)}
                             </div>
                         </div>
                     </div>
                     <div className="col">
                         <div className="card mb-4">
-                            <img src={course.banner} alt="" className="course-img-lg" />
+                            <img src={course?.banner} alt="" className="course-img-lg" />
                             <div className="p-5">
-                                <h3 className="font-w600 mb-4">{course.name}</h3>
-                                <button className="btn btn-blue-400 me-3">Enroll</button>
-                                <span className="font-w400">{course.enrolled} enrolled</span>
+                                <h3 className="font-w600 mb-4">{course?.name}</h3>
+                                <div style={{ opacity: 0.4, pointerEvents: 'none' }}>
+                                    <button className="btn btn-blue-400 me-3">Enroll</button>
+                                    <span className="font-w400">{course?.enrolled} enrolled</span>
+                                </div>
                             </div>
                         </div>
                         <div className="card p-5">
                             <h3 className="font-w600 mb-4">Course Description</h3>
-                            <p><b>Approximate Duration:</b> {course.total_duration} Hour{course.total_duration !== 1 && 's'}</p>
-                            <p><b>Difficulty:</b> {difficultyIntToString(course.difficulty)}</p>
-                            <p><Markdown>{course.description ?? ''}</Markdown></p>
+                            <p className="font-w300"><b>Approximate Duration:</b> {course?.total_duration} Hour{course?.total_duration !== 1 && 's'}</p>
+                            <p className="font-w300"><b>Difficulty:</b> {difficultyIntToString(course?.difficulty)}</p>
+                            <p className="font-w300"><Markdown>{course?.description ?? ''}</Markdown></p>
                         </div>
                     </div>
                 </div>

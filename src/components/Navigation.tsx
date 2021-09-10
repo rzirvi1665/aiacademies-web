@@ -7,7 +7,6 @@ const Navigation: React.FC = () => {
         <nav id="navbar" className="bg-white">
             <div className="container d-flex align-items-center">
                 <h1 className="me-5">Logo Here</h1>
-                <Link to="/" className="text-gray nav-item">Home</Link>
                 <Link to="/courses" className="text-gray nav-item">Courses</Link>
                 {/*<Link to="/challenges" className="text-gray nav-item">Challenges</Link>*/}
                 {/*<Link to="/blog" className="text-gray nav-item">Blog</Link>*/}
