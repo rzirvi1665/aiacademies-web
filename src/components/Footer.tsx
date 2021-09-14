@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaDiscord, FaInstagram } from 'react-icons/all';
+import logo from '../img/full_logo.png';
 
 const Footer: React.FC = () => {
     return (
         <footer className="bg-blue-800 text-white">
             <div className="container d-flex justify-content-between">
                 <div>
-                    <h1 className="mb-4">Logo Here</h1>
+                    <img src={logo} alt="AI Academies" height={100} />
                     <p className="mb-0">&copy; 2021 Young Brains AI</p>
                     <p>All Rights Reserved</p>
                 </div>
