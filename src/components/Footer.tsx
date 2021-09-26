@@ -24,8 +24,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                     <h4 className="mb-3 font-w600">Contact Us</h4>
-                    <p className="mb-1">contact@email.com</p>
-                    <p className="mb-1">+1 (999) 999 9999</p>
+                    <p className="mb-1">youngbrainsai@gmail.com</p>
                     <button className="btn-social me-2">
                         <FaInstagram/>
                     </button>
