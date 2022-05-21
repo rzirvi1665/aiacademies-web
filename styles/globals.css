@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    h1 {
+        @apply text-4xl mb-3;
+    }
+    h2 {
+        @apply text-3xl mb-3;
+    }
+    h3 {
+        @apply text-2xl mb-3;
+    }
+    h4 {
+        @apply text-xl mb-3;
+    }
+    h5 {
+        @apply mb-3;
+    }
+}
+
+@font-face {
+    font-family: 'Prompt';
+    font-weight: 300;
+    src: url('/fonts/Prompt-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Prompt';
+    font-weight: 400;
+    src: url('/fonts/Prompt-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Prompt';
+    font-weight: 500;
+    src: url('/fonts/Prompt-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Prompt';
+    font-weight: 600;
+    src: url('/fonts/Prompt-SemiBold.woff2') format('woff2');
+}
