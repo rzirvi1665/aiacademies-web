@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { AiOutlineArrowRight, AiOutlineClockCircle, AiOutlineFlag } from 'react-icons/ai'
+import { AiOutlineArrowRight, AiOutlineClockCircle, AiOutlineFlag } from 'react-icons/ai';
 import { Lesson } from '~/types/api';
 
 interface LessonLinkProps {

@@ -2,9 +2,9 @@ import React from 'react';
 import { GetServerSideProps, NextPage } from 'next';
 import { AiFillStar, AiOutlineSearch } from 'react-icons/ai';
 import axios from 'axios';
-import { CourseCard } from '~/components/CourseCard'
+import { CourseCard } from '~/components/CourseCard';
 import { BaseCourse } from '~/types/api';
-import { PageHeader } from '~/components/PageHeader'
+import { PageHeader } from '~/components/PageHeader';
 
 interface CourseListPageProps {
     courses: BaseCourse[];
@@ -41,6 +41,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     const courses = await axios.get<BaseCourse>(`${process.env.API_URL}/api/courses/`);
 
     return { props: { courses: courses.data } };
-}
+};
 
 export default CourseList;

@@ -1,10 +1,10 @@
 import React from 'react';
-import { GetServerSideProps, NextPage } from 'next'
+import { GetServerSideProps, NextPage } from 'next';
 import Markdown from 'markdown-to-jsx';
-import axios from 'axios'
+import axios from 'axios';
 import CodeBlock from '~/components/CodeBlock';
 import { Course, Lesson } from '~/types/api';
-import { PageHeader } from '~/components/PageHeader'
+import { PageHeader } from '~/components/PageHeader';
 
 interface LessonPageProps {
     courseName: string;
@@ -31,7 +31,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
             courseName: course.data.name,
             lesson: lesson.data,
         }
-    }
-}
+    };
+};
 
 export default Lesson;

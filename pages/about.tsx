@@ -1,6 +1,6 @@
 import React from 'react';
 import { NextPage } from 'next';
-import { PageHeader } from '~/components/PageHeader'
+import { PageHeader } from '~/components/PageHeader';
 
 const About: NextPage = () => (
     <>

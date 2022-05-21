@@ -5,8 +5,8 @@ import Markdown from 'markdown-to-jsx';
 import { LessonLink } from '~/components/LessonLink';
 import { difficultyIntToString } from '~/utils/strings';
 import { Course } from '~/types/api';
-import { PageHeader } from '~/components/PageHeader'
-import { Card } from '~/components/Card'
+import { PageHeader } from '~/components/PageHeader';
+import { Card } from '~/components/Card';
 
 interface CoursePageProps {
     course: Course;
@@ -57,6 +57,6 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     const course = await axios.get<Course>(`${process.env.API_URL}/api/courses/${params!.course_id}/`);
 
     return { props: { course: course.data } };
-}
+};
 
 export default Course;
