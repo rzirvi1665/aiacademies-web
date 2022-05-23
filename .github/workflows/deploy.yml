@@ -21,6 +21,11 @@ jobs:
       - name: Checkout the repo
         uses: actions/checkout@v2
 
+      - name: Create .env file
+        run: |
+          touch .env
+          echo NEXT_PUBLIC_API_URL="https://api.aiacademies.com" >> .env
+
       - name: Build container image
         run: docker build -t $(echo $REGISTRY)/$(echo $IMAGE_NAME):$(echo $GITHUB_SHA | head -c7) .
 
