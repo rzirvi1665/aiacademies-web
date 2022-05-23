@@ -12,7 +12,7 @@ export const LessonLink: React.FC<LessonLinkProps> = ({ lesson }) => (
         <a className="relative flex justify-between duration-200 hover:bg-slate-100 rounded px-4 py-3">
             <span className="absolute -left-8 top-4 w-6 h-6 bg-slate-200 border-white border-4 rounded-full" />
             <div>
-                <h5 className="text-medium mb-1">{lesson.number ?? 0}. {lesson.title}</h5>
+                <h5 className="font-medium mb-1">{lesson.number ?? 0}. {lesson.title}</h5>
                 <div className="text-slate-400">
                     <span className="inline-flex items-center mr-5">
                         <AiOutlineClockCircle size={21} className="mr-1" />

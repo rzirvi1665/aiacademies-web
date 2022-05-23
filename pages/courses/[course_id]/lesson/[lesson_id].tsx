@@ -23,8 +23,8 @@ const Lesson: NextPage<LessonPageProps> = ({ courseName, lesson }) => (
 );
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-    const lesson = await axios.get<Lesson>(`${process.env.API_URL}/api/lessons/${params!.lesson_id}/`);
-    const course = await axios.get<Course>(`${process.env.API_URL}/api/courses/${params!.course_id}/`);
+    const lesson = await axios.get<Lesson>(`${process.env.NEXT_PUBLIC_API_URL}/api/lessons/${params!.lesson_id}/`);
+    const course = await axios.get<Course>(`${process.env.NEXT_PUBLIC_API_URL}/api/courses/${params!.course_id}/`);
 
     return {
         props: {
