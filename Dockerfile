@@ -18,6 +18,6 @@ COPY --from=builder /aiacademies-web/node_modules ./node_modules
 COPY --from=builder /aiacademies-web/package.json ./package.json
 COPY --from=builder /aiacademies-web/.env ./.env
 
-EXPOSE 80
-ENV PORT 80
+EXPOSE 8080
+ENV PORT 8080
 CMD ["yarn", "start"]
