@@ -29,7 +29,7 @@ const Navigation: React.FC = () => {
                     </>
                 ) : (
                     <>
-                        <Link href="/signup" passHref>
+                        <Link href="/signin" passHref>
                             <a className="ml-auto font-medium">
                                 Sign In
                             </a>
