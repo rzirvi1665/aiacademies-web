@@ -35,17 +35,10 @@ const Course: NextPage<CoursePageProps> = ({ course }) => (
                         />
                         <div className="p-10">
                             <h2 className="font-medium">{course?.name}</h2>
-                            {/*<div style={{ opacity: 0.4, pointerEvents: 'none' }}>*/}
-                            {/*    <button className="btn btn-blue-400 me-3">Enroll</button>*/}
-                            {/*    <span className="font-w400">{course?.enrolled} enrolled</span>*/}
-                            {/*</div>*/}
+                            <p className="mb-2"><b className="font-medium">Approximate Duration:</b> {course?.total_duration} Hour{course?.total_duration !== 1 && 's'}</p>
+                            <p className="mb-2"><b className="font-medium">Difficulty:</b> {difficultyIntToString(course?.difficulty)}</p>
+                            <p><Markdown>{course?.description ?? ''}</Markdown></p>
                         </div>
-                    </Card>
-                    <Card className="font-light">
-                        <h2 className="font-medium">Course Description</h2>
-                        <p className="mb-2"><b className="font-medium">Approximate Duration:</b> {course?.total_duration} Hour{course?.total_duration !== 1 && 's'}</p>
-                        <p className="mb-2"><b className="font-medium">Difficulty:</b> {difficultyIntToString(course?.difficulty)}</p>
-                        <p><Markdown>{course?.description ?? ''}</Markdown></p>
                     </Card>
                 </div>
             </div>
