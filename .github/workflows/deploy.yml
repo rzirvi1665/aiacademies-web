@@ -12,7 +12,7 @@ on:
 
 env:
   REGISTRY: "registry.digitalocean.com/aiacademies-web"
-  IMAGE_NAME: "aiacademies-web"
+  IMAGE_NAME: "website"
 
 jobs:
   build_and_push:
@@ -27,7 +27,7 @@ jobs:
           echo NEXT_PUBLIC_API_URL="https://api.aiacademies.com" >> .env
 
       - name: Build container image
-        run: docker build -t $(echo $REGISTRY)/$(echo $IMAGE_NAME):$(echo $GITHUB_SHA | head -c7) .
+        run: docker build -t $(echo $REGISTRY)/$(echo $IMAGE_NAME) .
 
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
@@ -41,7 +41,7 @@ jobs:
         run: if [ ! -z "$(doctl registry repository list | grep "$(echo $IMAGE_NAME)")" ]; then doctl registry repository delete-manifest $(echo $IMAGE_NAME) $(doctl registry repository list-tags $(echo $IMAGE_NAME) | grep -o "sha.*") --force; else echo "No repository"; fi
 
       - name: Push image to DigitalOcean Container Registry
-        run: docker push $(echo $REGISTRY)/$(echo $IMAGE_NAME):$(echo $GITHUB_SHA | head -c7)
+        run: docker push $(echo $REGISTRY)/$(echo $IMAGE_NAME)
 
   deploy:
     runs-on: ubuntu-latest
@@ -67,4 +67,4 @@ jobs:
             -p 8080:8080 \
             --restart always \
             --name $(echo $IMAGE_NAME) \
-            $(echo $REGISTRY)/$(echo $IMAGE_NAME):$(echo $GITHUB_SHA | head -c7)
+            $(echo $REGISTRY)/$(echo $IMAGE_NAME)
