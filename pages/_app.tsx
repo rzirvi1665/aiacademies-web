@@ -4,6 +4,7 @@ import { AppProps } from 'next/app';
 import Navigation from '~/components/Navigation';
 import Footer from '~/components/Footer';
 import '~/styles/globals.css';
+import '~/styles/Spinner.css';
 
 const App = ({ Component, pageProps }: AppProps) => (
     <>
