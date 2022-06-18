@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { GetServerSideProps, NextPage } from 'next';
-import Router from 'next/router';
 import axios from 'axios';
 import Markdown from 'markdown-to-jsx';
 import { Field, Form, Formik } from 'formik';
+import classNames from 'classnames';
 import { PageHeader } from '~/components/PageHeader';
 import { Input, Radio } from '~/components/Forms';
 import CodeBlock from '~/components/CodeBlock';
@@ -11,7 +11,6 @@ import { Button } from '~/components/Button';
 import axiosInstance from '~/utils/axiosInstance';
 import { Course, Lesson, Quiz, QuizAttempt } from '~/types/api';
 import Spinner from '~/components/Spinner';
-import classNames from 'classnames'
 
 interface QuizPageProps {
     courseName: string;
@@ -138,7 +137,7 @@ const QuizPage: NextPage<QuizPageProps> = ({ courseName, quiz }) => {
             </div>
         </>
     );
-}
+};
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     const quiz = await axios.get<Lesson>(`${process.env.NEXT_PUBLIC_API_URL}/api/quizzes/${params!.quiz_id}/`);

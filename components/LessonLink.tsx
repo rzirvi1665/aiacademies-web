@@ -64,4 +64,4 @@ export const QuizLink: React.FC<QuizLinkProps> = ({ quiz }) => {
             </span>
         </a>
     );
-}
+};
