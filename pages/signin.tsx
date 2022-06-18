@@ -18,7 +18,7 @@ const SignIn: NextPage = () => {
 
     return (
         <div className="container">
-            <div className="w-[30rem] py-28 mx-auto">
+            <div className="lg:w-[30rem] py-28 mx-auto">
                 <h1 className="font-medium">Sign In</h1>
                 <p className="mb-10">
                     Don&apos;t have an account?

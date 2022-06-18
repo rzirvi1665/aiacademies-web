@@ -9,13 +9,13 @@ const About: NextPage = () => (
         <PageHeader title="About Us" />
         <div className="container py-10">
             <h1>Mission</h1>
-            <ul className="list-disc pl-6 mb-10">
+            <ul className="list-disc pl-5 mb-10">
                 <li>Young Brains AI is an international nonprofit organization whose goal is to provide a free, up-to-date, and accessible artificial intelligence curriculum to middle and high school students</li>
                 <li>We strive to broaden the participation of underrepresented groups, of gender and ethnicity, to increase their success in computer science and technology</li>
                 <li>This website, AI Academies, offers a free curriculum that removes any financial barrier to immersing students in the world of AI</li>
             </ul>
             <h1>Founders</h1>
-            <div className="flex gap-10 mb-5">
+            <div className="lg:flex gap-10 mb-5">
                 <Image src={rayhan} width={676} height={598} />
                 <div>
                     <h3>Rayhan Zirvi</h3>

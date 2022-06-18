@@ -13,7 +13,7 @@ const Profile: NextPage = () => {
 
     return (
         <div className="container">
-            <div className="w-[30rem] py-28 mx-auto">
+            <div className="lg:w-[30rem] py-28 mx-auto">
                 <h1 className="font-medium">Complete your profile</h1>
                 <p className="mb-10">
                     You can change these details at any time in your settings.

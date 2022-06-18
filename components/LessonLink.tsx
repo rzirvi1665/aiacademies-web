@@ -10,7 +10,7 @@ interface LessonLinkProps {
 
 export const LessonLink: React.FC<LessonLinkProps> = ({ lesson }) => (
     <Link href={`/courses/${lesson.course_id ?? 1}/lesson/${lesson.id}`} passHref>
-        <a className="relative flex justify-between duration-200 hover:bg-slate-100 rounded px-4 py-3">
+        <a className="relative flex flex-col lg:flex-row justify-between duration-200 hover:bg-slate-100 rounded px-4 py-3">
             <span className="absolute -left-8 top-4 w-6 h-6 bg-slate-200 border-white border-4 rounded-full" />
             <div>
                 <h5 className="font-medium mb-1">{lesson.number ?? 0}. {lesson.title}</h5>
@@ -25,7 +25,7 @@ export const LessonLink: React.FC<LessonLinkProps> = ({ lesson }) => (
                     </span>
                 </div>
             </div>
-            <span className="inline-flex items-center text-deepblue-400">
+            <span className="flex lg:inline-flex items-center text-deepblue-400">
                 View Lesson <AiOutlineArrowRight size={21} className="ml-1"/>
             </span>
         </a>
@@ -41,12 +41,12 @@ export const QuizLink: React.FC<QuizLinkProps> = ({ quiz }) => {
     if (session) {
         return (
             <Link href={`/courses/${quiz.course_id ?? 1}/quiz/${quiz.id}`} passHref>
-                <a className="relative flex justify-between duration-200 hover:bg-slate-100 rounded px-4 py-3">
+                <a className="relative flex flex-col lg:flex-row  justify-between duration-200 hover:bg-slate-100 rounded px-4 py-3">
                     <span className="absolute -left-8 top-4 w-6 h-6 bg-slate-200 border-white border-4 rounded-full" />
                     <div>
                         <h5 className="font-medium mb-0">{quiz.number ?? 0}. {quiz.title}</h5>
                     </div>
-                    <span className="inline-flex items-center text-deepblue-700">
+                    <span className="flex lg:inline-flex items-center text-deepblue-700">
                         Attempt Quiz <AiOutlineArrowRight size={21} className="ml-1"/>
                     </span>
                 </a>
@@ -54,12 +54,12 @@ export const QuizLink: React.FC<QuizLinkProps> = ({ quiz }) => {
         );
     }
     return (
-        <a className="relative flex justify-between rounded px-4 py-3">
+        <a className="relative flex flex-col lg:flex-row  justify-between rounded px-4 py-3">
             <span className="absolute -left-8 top-4 w-6 h-6 bg-slate-200 border-white border-4 rounded-full" />
             <div>
                 <h5 className="font-medium mb-0">{quiz.number ?? 0}. {quiz.title}</h5>
             </div>
-            <span className="inline-flex items-center text-deepblue-700 font-medium">
+            <span className="flex lg:inline-flex items-center text-deepblue-700 font-medium">
                 Sign in to attempt
             </span>
         </a>

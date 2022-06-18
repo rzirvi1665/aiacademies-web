@@ -16,7 +16,7 @@ const Course: NextPage<CoursePageProps> = ({ course }) => (
     <>
         <PageHeader title={course.name} />
         <div className="container py-10">
-            <div className="flex gap-10">
+            <div className="flex flex-col lg:flex-row gap-10">
                 <div className="basis-1/2">
                     <Card>
                         <h2 className="font-medium">Lessons</h2>

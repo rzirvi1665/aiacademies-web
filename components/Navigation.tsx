@@ -9,7 +9,7 @@ const Navigation: React.FC = () => {
     const session = useSession();
 
     return (
-        <nav className="sticky top-0 bg-white z-30">
+        <nav className="sticky top-0 bg-white z-30 py-4">
             <div className="container flex items-center gap-8">
                 <Link href="/" passHref>
                     <a>
@@ -18,9 +18,9 @@ const Navigation: React.FC = () => {
                 </Link>
                 {session ? (
                     <>
-                        <p className="ml-auto font-medium">Signed in as {session.fullName}</p>
+                        <p className="ml-auto font-medium hidden lg:visible">Signed in as {session.fullName}</p>
                         <Link href="/signout" passHref>
-                            <a>
+                            <a className="ml-0 lg:ml-auto">
                                 <Button className="bg-deepblue-500 text-white font-medium">
                                     Sign Out
                                 </Button>

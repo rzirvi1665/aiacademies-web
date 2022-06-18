@@ -6,7 +6,7 @@ import logo from '~/public/img/full_logo.png';
 
 const Footer: React.FC = () => (
     <footer className="bg-slate-100">
-        <div className="container flex justify-between py-16">
+        <div className="container flex flex-col lg:flex-row justify-between py-16">
             <div>
                 <Image src={logo} alt="AI Academies" height={100} width={333} />
                 <p className="mb-0">&copy; {new Date().getFullYear()} Young Brains AI</p>
