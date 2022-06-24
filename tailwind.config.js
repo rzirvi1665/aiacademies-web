@@ -25,6 +25,20 @@ module.exports = {
                     100: '#CAF0F8',
                 }
             },
+            typography: {
+                DEFAULT: {
+                    css: {
+                        code: {
+                            '&::before': {
+                                content: '"" !important',
+                            },
+                            '&::after': {
+                                content: '"" !important',
+                            }
+                        }
+                    }
+                }
+            }
         },
         fontFamily: {
             sans: ['Prompt', 'sans-serif'],

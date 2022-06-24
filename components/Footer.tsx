@@ -17,14 +17,8 @@ const Footer: React.FC = () => (
                 <Link href="/about" passHref>
                     <a><p>About Us</p></a>
                 </Link>
-            </div>
-            <div>
-                <h4 className="mb-3 font-medium">Resources</h4>
-                <Link href="/about" passHref>
-                    <a><p>Privacy Policy</p></a>
-                </Link>
-                <Link href="/about" passHref>
-                    <a><p>Terms of Use</p></a>
+                <Link href="/partners" passHref>
+                    <a><p>Partners</p></a>
                 </Link>
             </div>
             <div>

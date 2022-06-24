@@ -16,11 +16,26 @@ const Navigation: React.FC = () => {
                         <Image src={logo} alt="AI Academies" height={100} width={333} />
                     </a>
                 </Link>
+                <Link href="/" passHref>
+                    <a className="ml-0 hidden lg:ml-auto lg:block">
+                        Courses
+                    </a>
+                </Link>
+                <Link href="/about" passHref>
+                    <a className="hidden lg:block">
+                        About Us
+                    </a>
+                </Link>
+                <Link href="/partners" passHref>
+                    <a className="hidden lg:block">
+                        Partners
+                    </a>
+                </Link>
                 {session ? (
                     <>
-                        <p className="ml-auto font-medium hidden lg:visible">Signed in as {session.fullName}</p>
+                        <p className="font-medium hidden lg:visible">Signed in as {session.fullName}</p>
                         <Link href="/signout" passHref>
-                            <a className="ml-0 lg:ml-auto">
+                            <a>
                                 <Button className="bg-deepblue-500 text-white font-medium">
                                     Sign Out
                                 </Button>
@@ -30,7 +45,7 @@ const Navigation: React.FC = () => {
                 ) : (
                     <>
                         <Link href="/signin" passHref>
-                            <a className="ml-auto font-medium">
+                            <a className="ml-auto lg:ml-0 font-medium">
                                 Sign In
                             </a>
                         </Link>
