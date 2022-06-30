@@ -3,7 +3,7 @@
     "rules": {
         "indent": ["error", 4, { "SwitchCase": 1 }],
         "quotes": ["error", "single"],
-        "semi": ["error", "always"],
+        "semi": ["warn", "always"],
         "no-trailing-spaces": ["error"],
         "react-hooks/exhaustive-deps": "off",
         "react/display-name": "off",
