@@ -2,7 +2,6 @@ import React from 'react';
 import { NextPage } from 'next';
 import { PageHeader } from '~/components/PageHeader';
 import Image from 'next/image';
-import rayhan from '~/public/img/rayhan.jpg';
 import humanityFirst from '~/public/img/HumanityFirst.png';
 import ayeshaAli from '~/public/img/AyeshaAli.jpg';
 
