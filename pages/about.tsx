@@ -10,16 +10,16 @@ const About: NextPage = () => (
         <div className="container py-10">
             <h1>Mission</h1>
             <ul className="list-disc pl-5 mb-10">
-                <li>Young Brains AI is an international nonprofit organization whose goal is to provide a free, up-to-date, and accessible artificial intelligence curriculum to middle and high school students</li>
-                <li>We strive to broaden the participation of underrepresented groups, of gender and ethnicity, to increase their success in computer science and technology</li>
-                <li>This website, AI Academies, offers a free curriculum that removes any financial barrier to immersing students in the world of AI</li>
+                <li><b>Young Brains AI</b> is an international nonprofit organization whose goal is to provide a free, up-to-date, and accessible artificial intelligence curriculum to middle and high school students across the globe</li>
+                <li>We strive to broaden the participation of underrepresented groups (including gender, socioeconomic status, and ethnicity) to increase their success in computer science and technology</li>
+                <li>This website, <b>AI Academies</b>, offers a free curriculum that removes any financial barrier to immersing students in the world of AI</li>
             </ul>
             <h1>Founders</h1>
             <div className="lg:flex gap-10 mb-5">
                 <Image src={rayhan} alt="Rayhan Zirvi" width={676} height={598} />
                 <div>
                     <h3>Rayhan Zirvi</h3>
-                    <p>Rayhan Zirvi is a rising senior at River Hill High School. He is passionate about helping others learn about computer science and AI. He has qualified for the USACO Gold division, qualified for AIME, and placed 11th in the US at Google Kick Start. He also served as a director for <a className="underline text-blue-600" href="https://hocohoc.com/">Howard County Hour of Code</a>, where he raised over $20,000 in sponsorships, directed content, and outreached to schools. In his free time, he enjoys watching the NBA, playing basketball, and playing golf.</p>
+                    <p>Rayhan Zirvi is a rising senior at River Hill High School. He is passionate about helping others learn about computer science and AI. He has qualified for the USACO Gold division, qualified for AIME, and placed 11th in the US at Google Kick Start. He also served as a director for <a className="underline text-blue-600" href="https://hocohoc.com/" target="_blank">Howard County Hour of Code</a>, where he raised over $20,000 in sponsorships, directed content, and outreached to schools. In his free time, he enjoys watching the NBA, playing basketball, and playing golf.</p>
                 </div>
             </div>
             <h3>Saketh Sundar</h3>
