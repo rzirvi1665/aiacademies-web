@@ -23,7 +23,7 @@ const About: NextPage = () => (
                 </div>
             </div>
             <h3>Saketh Sundar</h3>
-            <p>Saketh is a rising senior at River Hill High School interested in the intersection of computational sciences with other fields within STEM. He is involved in multiple STEM extracurricular activities at school and holds leadership positions in Science Olympiad, Technology Honors Society, and AI/ML Club. His research interests are in applying machine learning methods to environmental and medical science problems and has pursued these through a variety of different research internships Outside of school and research, In his free time, Saketh enjoys watching football and movies, as well as</p>
+            <p>Saketh is a rising senior at River Hill High School interested in the intersection of computational sciences with other fields within STEM. He is involved in multiple STEM extracurricular activities at school and holds leadership positions in Science Olympiad, Maryland Technology Honor Society, and AI Club. His research interests are in applying machine learning methods to environmental and medical science problems, and he has pursued these through a variety of different research internships. In his free time, Saketh enjoys watching football and movies, as well as</p>
         </div>
     </>
 );
