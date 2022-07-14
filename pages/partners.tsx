@@ -6,7 +6,6 @@ const Partners: NextPage = () => (
     <>
         <PageHeader title="Partners" />
         <div className="container py-10">
-            
         </div>
     </>
 );
