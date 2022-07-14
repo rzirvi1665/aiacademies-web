@@ -19,7 +19,7 @@ const About: NextPage = () => (
                 <Image src={rayhan} alt="Rayhan Zirvi" width={676} height={598} />
                 <div>
                     <h3>Rayhan Zirvi</h3>
-                    <p>Rayhan Zirvi is a rising senior at River Hill High School. He is passionate about helping others learn about computer science and AI. He has qualified for the USACO Gold division, qualified for AIME, and placed 11th in the US at Google Kick Start. He also served as a director for <a className="underline text-blue-600" target="_blank" href="https://hocohoc.com/">Howard County Hour of Code</a>, where he raised over $20,000 in sponsorships, directed content, and outreached to schools. In his free time, he enjoys watching the NBA, playing basketball, and playing golf.</p>
+                    <p>Rayhan Zirvi is a rising senior at River Hill High School. He is passionate about helping others learn about computer science and AI. He has qualified for the USACO Gold division, qualified for AIME, and placed 11th in the US at Google Kick Start. He also served as a director for <a className="underline text-blue-600" href="https://hocohoc.com/">Howard County Hour of Code</a>, where he raised over $20,000 in sponsorships, directed content, and outreached to schools. In his free time, he enjoys watching the NBA, playing basketball, and playing golf.</p>
                 </div>
             </div>
             <h3>Saketh Sundar</h3>
