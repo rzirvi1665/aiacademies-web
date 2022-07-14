@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { PageHeader } from '~/components/PageHeader';
 import Image from 'next/image';
 import humanityFirst from '~/public/img/HumanityFirst.png';
-import ayeshaAli from '~/public/img/AyeshaAli.jpg';
+import ayeshaAli from '~/public/img/AyeshaAli.png';
 
 const Partners: NextPage = () => (
     <>
