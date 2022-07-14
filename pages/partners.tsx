@@ -7,7 +7,7 @@ import ayeshaAli from '~/public/img/AyeshaAli.jpg';
 
 const Partners: NextPage = () => (
     <>
-        <PageHeader title="Partners" />
+        <PageHeader title="Partner" />
         <div className="container py-10">
             <h1>Humanity First</h1>
             <a href="https://humanityfirst.org/" target="_blank" rel="noreferrer"> <Image src={humanityFirst} alt="Humanity First" width={500} height={598} /></a>
