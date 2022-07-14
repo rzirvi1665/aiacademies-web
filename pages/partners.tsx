@@ -10,7 +10,7 @@ const Partners: NextPage = () => (
         <div className="container py-10">
             <h1>Humanity First</h1>
             <Image src={rayhan} alt="Rayhan Zirvi" width={676} height={598} />
-            <br><br/>
+            <br/>
             <h1>Ayesha Ali Academy</h1>
             <Image src={rayhan} alt="Rayhan Zirvi" width={676} height={598} />
         </div>
