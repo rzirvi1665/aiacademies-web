@@ -25,8 +25,8 @@ const Course: NextPage<CoursePageProps> = ({ course }) => (
                             {[...course.lessons, ...course.quizzes]
                                 .sort((a, b) => a.number > b.number ? 1 : -1)
                                 .map((unit) => 'duration_minutes' in unit && 'points' in unit
-                                    ? <LessonLink key={unit.id} lesson={unit as Lesson} />
-                                    : <QuizLink key={unit.id} quiz={unit} />)}
+                                    ? <LessonLink key={unit.id} course={course} lesson={unit as Lesson} />
+                                    : <QuizLink key={unit.id} course={course} quiz={unit} />)}
                         </div>
                     </Card>
                 </div>
