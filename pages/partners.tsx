@@ -13,7 +13,7 @@ const Partners: NextPage = () => (
             <Image src={humanityFirst} alt="Humanity First" width={500} height={598} />
             <br/>
             <h1>Ayesha Ali Academy</h1>
-            <Image src={ayeshaAli} alt="Ayesha Ali Academy" width={400} height={400} />
+            <Image src={ayeshaAli} alt="Ayesha Ali Academy" width={500} height={500} />
         </div>
     </>
 );
