@@ -5,7 +5,7 @@ import { PageHeader } from '~/components/PageHeader';
 const Partners: NextPage = () => (
     <>
         <PageHeader title="Partners" />
-        <div className="container py-10"
+        <div className="container py-10">
             
         </div>
     </>
