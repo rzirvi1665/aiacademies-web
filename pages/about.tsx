@@ -15,7 +15,6 @@ const About: NextPage = () => (
                 <li>We strive to broaden the participation of underrepresented groups (including gender, socioeconomic status, and ethnicity) to increase their success in computer science and technology</li>
                 <br/>
                 <li>This website, <b>AI Academies</b>, offers a free curriculum that removes any financial barrier to immersing students in the world of AI</li>
-                <br/>
             </ul>
             <h1>Founders</h1>
             <div className="lg:flex gap-10 mb-5">
