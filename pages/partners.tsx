@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { PageHeader } from '~/components/PageHeader';
 import Image from 'next/image';
 import rayhan from '~/public/img/rayhan.jpg';
-import humanityFirst from '~/public/img/HumanityFirst.jpg';
+import humanityFirst from '~/public/img/HumanityFirst.png';
 
 const Partners: NextPage = () => (
     <>
