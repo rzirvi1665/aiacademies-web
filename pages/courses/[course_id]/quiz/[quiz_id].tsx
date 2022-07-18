@@ -66,7 +66,9 @@ const QuizPage: NextPage<QuizPageProps> = ({ courseName, quiz }) => {
                                     'text-emerald-600': review.answers[i].trim() === review.questions[i].correct_answer,
                                     'text-red-600': review.answers[i].trim() !== review.questions[i].correct_answer,
                                 })}>Your answer: {review.answers[i]}</p>
-                                <p className="text-emerald-600 font-medium">Correct answer: {review.questions[i].correct_answer}</p>
+                                {review.answers[i].trim() === review.questions[i].correct_answer && (
+                                    <p className="text-emerald-600 font-medium">Correct answer: {review.questions[i].correct_answer}</p>
+                                )}
                             </div>
                         </section>
                     ))}
