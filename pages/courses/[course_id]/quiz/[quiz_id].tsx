@@ -18,7 +18,7 @@ interface QuizPageProps {
 }
 
 const QuizPage: NextPage<QuizPageProps> = ({ courseName, quiz }) => {
-    const [review, setReview] = useState<QuizAttempt>();
+    const [review, setReview] = useState<QuizAttempt | undefined>(undefined);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -70,6 +70,7 @@ const QuizPage: NextPage<QuizPageProps> = ({ courseName, quiz }) => {
                             </div>
                         </section>
                     ))}
+                    <Button className="bg-deepblue-700 text-white" onClick={() => setReview(undefined)}>Re-attempt Quiz</Button>
                 </div>
             </>
         );
