@@ -13,6 +13,7 @@ const Partners: NextPage = () => (
             <a href="https://theeduproject.net/" target="_blank" rel="noreferrer"> <Image src={educationProject} alt="The Education Project" width={500} height={598} /></a>
             <br/>
             <h1>Ayesha Ali Academy</h1>
+            <br/>
             <a href="https://aa.academy/" target="_blank" rel="noreferrer"> <Image src={ayeshaAli} alt="Ayesha Ali Academy" width={500} height={500} /></a>
         </div>
     </>
