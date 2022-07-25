@@ -67,7 +67,7 @@ const SignUp: NextPage = () => {
                                 localStorage.setItem('access', data.access);
                                 localStorage.setItem('refresh', data.refresh);
                                 window.dispatchEvent(new Event('auth'));
-                                Router.push('/profile');
+                                Router.push('/');
                             })
                             .finally(() => setSubmitting(false));
                     }}
