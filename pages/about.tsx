@@ -10,6 +10,7 @@ const About: NextPage = () => (
         <PageHeader title="About Us" />
         <div className="container py-10">
             <h1>Founders</h1>
+            <br/>
             <div className="lg:flex gap-10 mb-5">
                 <div>
                     <Image src={rayhan} alt="Rayhan Zirvi" layout="fixed" width={598 / 4} height={676 / 4} />
