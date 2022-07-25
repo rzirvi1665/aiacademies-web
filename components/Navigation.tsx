@@ -16,7 +16,7 @@ const Navigation: React.FC = () => {
                         <Image src={logo} alt="AI Academies" height={100} width={333} />
                     </a>
                 </Link>
-                <Link href="/" passHref>
+                <Link href="/courses" passHref>
                     <a className="ml-0 hidden lg:ml-auto lg:block">
                         Courses
                     </a>

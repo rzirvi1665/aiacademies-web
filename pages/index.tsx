@@ -1,69 +1,47 @@
-import React, { useState } from 'react';
-import { GetServerSideProps, NextPage } from 'next';
-import { AiFillStar, AiOutlineSearch } from 'react-icons/ai';
-import axios from 'axios';
-import { Card } from '~/components/Card';
-import { CourseCard } from '~/components/CourseCard';
+import React from 'react';
+import { NextPage } from 'next';
+import { AiFillQuestionCircle } from 'react-icons/ai';
+import { Accordion, AccordionElement } from '~/components/Accordion';
 import { PageHeader } from '~/components/PageHeader';
-import { BaseCourse } from '~/types/api';
 import { useSession } from '~/utils/sessionHooks';
 
-interface CourseListPageProps {
-    courses: BaseCourse[];
-}
-
-const CourseList: NextPage<CourseListPageProps> = ({ courses }) => {
+const Home: NextPage = () => {
     const session = useSession();
-
-    const [search, setSearch] = useState('');
 
     return (
         <>
-            <PageHeader title={session ? `Welcome, ${session.firstName}` : 'Courses'} />
+            <PageHeader title={session ? `Welcome back, ${session.firstName}!` : 'Welcome to AI Academies!'} />
             <div className="container py-10">
-                <Card className="relative flex items-center !p-0 mb-10 text-lg">
-                    <AiOutlineSearch size={30} className="absolute left-5 fill-slate-400 pointer-events-none" />
-                    <input
-                        className="w-full h-full py-6 pl-16 pr-6 bg-transparent outline-0 placeholder:text-slate-400"
-                        placeholder="Search for a course or subject..."
-                        onChange={({ target }) => setSearch(target.value)}
-                    />
-                </Card>
-                {search ? (
-                    <>
-                        <h2 className="font-medium mb-10">Search Results</h2>
-                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mb-10">
-                            {courses
-                                ?.filter(course => course.name.toLowerCase().includes(search.toLowerCase()))
-                                .map((course) => <CourseCard key={course.id} course={course} />)}
-                        </div>
-                    </>
-                ) : (
-                    <>
-                        {courses?.some(course => course.featured) && (
-                            <h2 className="inline-flex items-center font-medium mb-10">
-                                <AiFillStar className="fill-amber-300 mr-2" />
-                                Featured Courses
-                            </h2>
-                        )}
-                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mb-10">
-                            {courses?.filter(course => course.featured).map((course) => <CourseCard key={course.id} course={course} />)}
-                        </div>
-                        <h2 className="font-medium mb-10">All Courses</h2>
-                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
-                            {courses?.map((course) => <CourseCard key={course.id} course={course} />)}
-                        </div>
-                    </>
-                )}
+                <h2 className="inline-flex items-center font-medium mb-10">
+                    <AiFillQuestionCircle className="mr-2" />
+                    Frequently Asked Questions
+                </h2>
+                <Accordion>
+                    <AccordionElement title="What is this site?">
+                        AI Academies is a user-friendly introduction to artificial intelligence and machine learning. The site’s goal is to make AI content accessible and free to all since current resources online are either overwhelmingly complicated or too expensive.
+                    </AccordionElement>
+                    <AccordionElement title="Why AI?">
+                        Every student should have the opportunity to learn AI. It is shaping the future of humanity across nearly every industry, so by starting early, students will have a foundation for success. The job market for AI is booming due to high demand, making careers in AI lucrative and stable. In addition, AI can make a real impact in the world by improving the lives of others. AI is still a new field, so there is a lot more research to be done and a lot more to discover.
+                    </AccordionElement>
+                    <AccordionElement title="Do I need any prior experience?">
+                        Not at all! All experience levels from beginner to advanced are welcomed and encouraged!
+                    </AccordionElement>
+                    <AccordionElement title="How do I create an account?">
+                        Simply click the “Sign Up” button on the top right, and then enter your full name, email address, and password.
+                    </AccordionElement>
+                    <AccordionElement title="What device should I use?">
+                        We recommend using a laptop or a device with a large screen for the best user experience. On mobile, some of the images may look distorted.
+                    </AccordionElement>
+                    <AccordionElement title="How do the courses work?">
+                        Each course is complete with lessons, template code, and quizzes. Once you make an account, you can attempt quizzes (they have unlimited attempts and show your score after each attempt). Courses are recommended to be completed in the order they appear.
+                    </AccordionElement>
+                    <AccordionElement title="What programming languages will I use?">
+                        These courses all use Python, a programming language used heavily in AI and machine learning.
+                    </AccordionElement>
+                </Accordion>
             </div>
         </>
     );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
-    const courses = await axios.get<BaseCourse>(`${process.env.NEXT_PUBLIC_API_URL}/api/courses/`);
-
-    return { props: { courses: courses.data } };
-};
-
-export default CourseList;
+export default Home;
