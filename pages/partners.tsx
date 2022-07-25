@@ -9,7 +9,7 @@ const Partners: NextPage = () => (
     <>
         <PageHeader title="Partners" />
         <div className="container py-10">
-            <h1>The Education Project (By Humanity First USA)</h1>
+            <h1>The Education Project By Humanity First USA</h1>
             <a href="https://theeduproject.net/" target="_blank" rel="noreferrer"> <Image src={educationProject} alt="The Education Project" width={500} height={598} /></a>
             <br/>
             <h1>Ayesha Ali Academy</h1>
