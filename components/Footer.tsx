@@ -14,6 +14,12 @@ const Footer: React.FC = () => (
             </div>
             <div>
                 <h4 className="mb-3 font-medium">Explore</h4>
+                <Link href="/" passHref>
+                    <a><p>Home</p></a>
+                </Link>
+                <Link href="/courses" passHref>
+                    <a><p>Courses</p></a>
+                </Link>
                 <Link href="/about" passHref>
                     <a><p>About Us</p></a>
                 </Link>

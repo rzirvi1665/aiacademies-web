@@ -12,10 +12,15 @@ const Home: NextPage = () => {
         <>
             <PageHeader title={session ? `Welcome back, ${session.firstName}!` : 'Welcome to AI Academies!'} />
             <div className="container py-10">
-                <h2 className="inline-flex items-center font-medium mb-10">
-                    <AiFillQuestionCircle className="mr-2" />
-                    Frequently Asked Questions
-                </h2>
+                <h2 className="font-medium mb-10">Mission</h2>
+                <ul className="list-disc pl-5 mb-10">
+                    <li><b>Young Brains AI</b> is an international non-profit organization whose goal is to provide a free, up-to-date, and accessible artificial intelligence curriculum to middle and high school students across the globe</li>
+                    <br/>
+                    <li>We strive to broaden the participation of underrepresented groups (including gender, socioeconomic status, and ethnicity) to increase their success in computer science and technology</li>
+                    <br/>
+                    <li>This website, <b>AI Academies</b>, offers a free curriculum that removes any financial barrier to immersing students in the world of AI</li>
+                </ul>
+                <h2 className="font-medium mb-10">Frequently Asked Questions</h2>
                 <Accordion>
                     <AccordionElement title="What is this site?">
                         AI Academies is a user-friendly introduction to artificial intelligence and machine learning. The site’s goal is to make AI content accessible and free to all since current resources online are either overwhelmingly complicated or too expensive.
