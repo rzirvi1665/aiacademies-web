@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <>
             <PageHeader title={session ? `Welcome back, ${session.firstName}!` : 'Welcome to AI Academies!'} />
             <div className="container py-10">
-                <h2 className="font-medium mb-10">Mission</h2>
+                <h2 className="font-medium mb-10">Our Mission</h2>
                 <ul className="list-disc pl-5 mb-10">
                     <li><b>Young Brains AI</b> is an international non-profit organization whose goal is to provide a free, up-to-date, and accessible artificial intelligence curriculum to middle and high school students across the globe</li>
                     <br/>
