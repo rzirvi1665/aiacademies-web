@@ -32,12 +32,11 @@ const Footer: React.FC = () => (
                 <a href="mailto:youngbrainsai@gmail.com">
                     <p className="mb-2">youngbrainsai@gmail.com</p>
                 </a>
-                <button className="btn-social mr-2">
-                    <FaInstagram size={21} />
-                </button>
-                <button className="btn-social">
-                    <FaDiscord size={21} />
-                </button>
+                <a href="https://discord.gg/XSn8nxqvw4" target="_blank" rel="noreferrer">
+                    <button className="btn-social">
+                        <FaDiscord size={21} />
+                    </button>
+                </a>
             </div>
         </div>
     </footer>
