@@ -9,14 +9,6 @@ const About: NextPage = () => (
     <>
         <PageHeader title="About Us" />
         <div className="container py-10">
-            <h1>Mission</h1>
-            <ul className="list-disc pl-5 mb-10">
-                <li><b>Young Brains AI</b> is an international non-profit organization whose goal is to provide a free, up-to-date, and accessible artificial intelligence curriculum to middle and high school students across the globe</li>
-                <br/>
-                <li>We strive to broaden the participation of underrepresented groups (including gender, socioeconomic status, and ethnicity) to increase their success in computer science and technology</li>
-                <br/>
-                <li>This website, <b>AI Academies</b>, offers a free curriculum that removes any financial barrier to immersing students in the world of AI</li>
-            </ul>
             <h1>Founders</h1>
             <div className="lg:flex gap-10 mb-5">
                 <div>
