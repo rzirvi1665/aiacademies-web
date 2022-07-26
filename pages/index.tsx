@@ -35,7 +35,7 @@ const Home: NextPage = () => {
                         Simply click the “Sign Up” button on the top right, and then enter your full name, email address, and password.
                     </AccordionElement>
                     <AccordionElement title="What device should I use?">
-                        We recommend using a laptop or a device with a large screen for the best user experience. On mobile, some of the images may look distorted.
+                        We recommend using a laptop or desktop for the best user experience. On mobile, some of the images may look distorted.
                     </AccordionElement>
                     <AccordionElement title="How do the courses work?">
                         Each course is complete with lessons, template code, and quizzes. Once you make an account, you can attempt quizzes; each quiz has unlimited attempts and shows your score after each attempt. Courses are recommended to be completed in the order they appear.
