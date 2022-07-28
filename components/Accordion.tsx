@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import classNames from 'classnames';
 import { AiOutlineDown } from 'react-icons/ai';
+import AnimateHeight from 'react-animate-height';
 import { AccordionContext } from './AccordionContext';
 
 export const Accordion: React.FC = ({ children }) => {
@@ -28,11 +29,11 @@ export const AccordionElement: React.FC<AccordionElementProps> = ({ title, child
                 <AiOutlineDown className={classNames('duration-500', { '-rotate-90': active !== title })} />
                 {title}
             </div>
-            <div className={classNames('duration-500', { 'max-h-40': active === title, 'max-h-0': active !== title })}>
+            <AnimateHeight duration={500} height={active === title ? 'auto' : 0}>
                 <div className="px-5 py-3">
                     {children}
                 </div>
-            </div>
+            </AnimateHeight>
         </div>
     );
 };
