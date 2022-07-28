@@ -1,14 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import classNames from 'classnames';
 import { AiOutlineDown } from 'react-icons/ai';
 import { AccordionContext } from './AccordionContext';
 
 export const Accordion: React.FC = ({ children }) => {
     const [active, setActive] = useState<any>(undefined);
-
-    useEffect(() => {
-        console.log(active);
-    }, [active]);
 
     return (
         <AccordionContext.Provider value={{ active, setActive }}>
@@ -32,7 +28,7 @@ export const AccordionElement: React.FC<AccordionElementProps> = ({ title, child
                 <AiOutlineDown className={classNames('duration-500', { '-rotate-90': active !== title })} />
                 {title}
             </div>
-            <div className={classNames('duration-500', { 'max-h-32': active === title, 'max-h-0': active !== title })}>
+            <div className={classNames('duration-500', { 'max-h-40': active === title, 'max-h-0': active !== title })}>
                 <div className="px-5 py-3">
                     {children}
                 </div>
