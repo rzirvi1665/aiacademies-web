@@ -23,16 +23,16 @@ const Home: NextPage = () => {
                 <h2 className="font-medium mb-10">Our Impact</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-10">
                     <div className="rounded-xl bg-slate-100/50 p-5">
-                        <h4 className="font-medium">100+</h4>
-                        <h4 className="mb-0">Users</h4>
+                        <h3 className="font-medium">100+</h3>
+                        <h3 className="mb-0">Users</h3>
                     </div>
                     <div className="rounded-xl bg-slate-100/50 p-5">
-                        <h4 className="font-medium">3,000+</h4>
-                        <h4 className="mb-0">Page Views</h4>
+                        <h3 className="font-medium">3,000+</h3>
+                        <h3 className="mb-0">Page Views</h3>
                     </div>
                     <div className="rounded-xl bg-slate-100/50 p-5">
-                        <h4 className="font-medium">6</h4>
-                        <h4 className="mb-0">Countries</h4>
+                        <h3 className="font-medium">6</h3>
+                        <h3 className="mb-0">Countries</h3>
                     </div>
                 </div>
                 <h2 className="font-medium mb-10">Frequently Asked Questions</h2>
