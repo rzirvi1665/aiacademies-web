@@ -20,6 +20,21 @@ const Home: NextPage = () => {
                     <br/>
                     <li>This website, <b>AI Academies</b>, offers a free curriculum that removes any financial barrier to immersing students in the world of AI</li>
                 </ul>
+                <h2 className="font-medium mb-10">Statistics</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-10">
+                    <div className="rounded-xl bg-slate-100/50 p-5">
+                        <h4 className="font-medium">Registered Users</h4>
+                        <h4 className="mb-0">0</h4>
+                    </div>
+                    <div className="rounded-xl bg-slate-100/50 p-5">
+                        <h4 className="font-medium">Page Views</h4>
+                        <h4 className="mb-0">0</h4>
+                    </div>
+                    <div className="rounded-xl bg-slate-100/50 p-5">
+                        <h4 className="font-medium">Countries</h4>
+                        <h4 className="mb-0">0</h4>
+                    </div>
+                </div>
                 <h2 className="font-medium mb-10">Frequently Asked Questions</h2>
                 <Accordion>
                     <AccordionElement title="What is this site?">
