@@ -20,7 +20,6 @@ const Home: NextPage = () => {
                     <br/>
                     <li>This website, <b>AI Academies</b>, offers a free curriculum that removes any financial barrier to immersing students in the world of AI</li>
                 </ul>
-                <h2 className="font-medium mb-10">100+ Users     3,000+ Pageviews      5 Countries</h2>
                 <h2 className="font-medium mb-10">Frequently Asked Questions</h2>
                 <Accordion>
                     <AccordionElement title="What is this site?">
