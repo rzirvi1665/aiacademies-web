@@ -31,7 +31,7 @@ const Home: NextPage = () => {
                         <h3 className="mb-0">Page Views</h3>
                     </div>
                     <div className="rounded-xl bg-slate-100/50 p-5">
-                        <h3 className="font-medium">10</h3>
+                        <h3 className="font-medium">10+</h3>
                         <h3 className="mb-0">Countries Reached</h3>
                     </div>
                 </div>
